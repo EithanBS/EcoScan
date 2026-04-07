@@ -46,9 +46,6 @@ export default function App() {
                     >
                       View Credits
                     </button>
-                    <p className="text-hydro-blue/40 text-[10px] font-mono uppercase tracking-[0.3em] italic">
-                      "Protecting the planet, one scan at a time."
-                    </p>
                   </div>
                 </div>
               </footer>
