@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { motion, AnimatePresence } from 'motion/react';
 import { Upload, Leaf, AlertTriangle, Loader2, X, ArrowRight, Activity, Info } from 'lucide-react';
-import { identifyPlant } from '../../services/gemini';
+import { identifyPlant } from '../../services/helixmind';
 import { cn } from '../../lib/utils';
 
 export const PlantScan = () => {
@@ -191,12 +191,11 @@ export const PlantScan = () => {
                   </div>
                 </div>
 
-                <div className="flex items-center justify-between px-6 py-4 bg-hydro-cream border border-hydro-sand/20 rounded-2xl">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-hydro-cyan animate-pulse" />
-                    <span className="text-[10px] font-mono text-hydro-blue/40 uppercase tracking-widest">System Status: Analysis Verified</span>
-                  </div>
-                  <button className="text-[10px] font-bold uppercase tracking-widest text-hydro-blue hover:underline">Download Dataset</button>
+                <div className="p-5 bg-amber-50 border border-amber-200 rounded-2xl flex items-start gap-3">
+                  <AlertTriangle size={18} className="text-amber-600 shrink-0 mt-0.5" />
+                  <p className="text-sm text-amber-900/90 leading-relaxed">
+                    AI identification can be incorrect. Confirm plant species with a professional field guide, qualified botanist, or certified local expert before handling or consuming unknown plants.
+                  </p>
                 </div>
               </motion.div>
             ) : !analyzing && (

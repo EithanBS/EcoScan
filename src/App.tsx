@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Hero, Features, AboutSection } from './components/layout/Landing';
+import { Navbar, Hero, AboutSection } from './components/layout/Landing';
 import { HydroScan } from './components/analysis/HydroScan';
 import { PlantScan } from './components/analysis/PlantScan';
 import { ParticleTextEffect } from './components/ui/particle-text-effect';
@@ -29,7 +29,6 @@ export default function App() {
                 onStartPlant={() => setCurrentPage('plant')}
               />
               <AboutSection />
-              <Features />
               
               <footer className="py-24 px-6 border-t border-hydro-sand/20 flex flex-col items-center">
                 <div className="max-w-7xl w-full mx-auto flex flex-col items-center gap-12">

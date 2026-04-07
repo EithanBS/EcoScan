@@ -1,8 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { Leaf, Droplets, Info, ShieldCheck, Activity, Globe } from 'lucide-react';
-import { cn } from '../../lib/utils';
-import { GlowCard } from '../ui/spotlight-card';
+import { Leaf, Droplets, Globe } from 'lucide-react';
 
 export const Navbar = ({ onNavigate }: { onNavigate: (page: 'home' | 'hydro' | 'plant' | 'thank-you') => void }) => {
   return (
@@ -151,73 +149,6 @@ export const AboutSection = () => {
               ))}
             </ul>
           </motion.div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export const Features = () => {
-  const features = [
-    {
-      icon: <Droplets className="text-hydro-blue" />,
-      title: "HydroScan",
-      desc: "Analyze water bodies for turbidity, algal blooms, and pollution risks using computer vision.",
-      color: "bg-blue-50",
-      glowColor: "blue" as const
-    },
-    {
-      icon: <Leaf className="text-hydro-cyan" />,
-      title: "PlantScan",
-      desc: "Identify species instantly from photos of leaves, flowers, or bark to map local biodiversity.",
-      color: "bg-cyan-50",
-      glowColor: "blue" as const
-    },
-    {
-      icon: <Activity className="text-hydro-blue-light" />,
-      title: "Automated Scoring",
-      desc: "Get instant environmental health scores and risk assessments for rapid decision making.",
-      color: "bg-blue-50",
-      glowColor: "blue" as const
-    }
-  ];
-
-  return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-serif text-hydro-blue mb-4">Precision Tools for a Greener Future</h2>
-          <p className="text-hydro-blue/60 max-w-2xl mx-auto">
-            Our platform combines cutting-edge AI with environmental science to provide 
-            accessible tools for conservation, education, and research.
-          </p>
-        </div>
-        
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {features.map((f, i) => (
-            <motion.div 
-              key={i}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group h-full"
-            >
-              <GlowCard 
-                glowColor={f.glowColor} 
-                customSize={true} 
-                className="h-full bg-white/50 border border-hydro-sand/20 hover:border-transparent transition-all"
-              >
-                <div className="flex flex-col h-full">
-                  <div className={cn("w-14 h-14 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform", f.color)}>
-                    {f.icon}
-                  </div>
-                  <h3 className="text-xl font-display font-bold mb-3 text-hydro-blue">{f.title}</h3>
-                  <p className="text-sm text-hydro-blue/60 leading-relaxed">{f.desc}</p>
-                </div>
-              </GlowCard>
-            </motion.div>
-          ))}
         </div>
       </div>
     </section>

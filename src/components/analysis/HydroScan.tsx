@@ -1,10 +1,9 @@
 import React, { useState, useCallback } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { motion, AnimatePresence } from 'motion/react';
-import { Upload, Droplets, AlertTriangle, CheckCircle2, Loader2, X, ArrowRight, Activity } from 'lucide-react';
-import { analyzeWater } from '../../services/gemini';
+import { Upload, Droplets, AlertTriangle, Loader2, X, ArrowRight, Activity } from 'lucide-react';
+import { analyzeWater } from '../../services/helixmind';
 import { cn } from '../../lib/utils';
-import { DropzoneOptions } from 'react-dropzone';
 
 export const HydroScan = () => {
   const [image, setImage] = useState<string | null>(null);
@@ -173,29 +172,13 @@ export const HydroScan = () => {
                       ))}
                     </div>
                   </div>
-
-                  {/* Recommendations */}
-                  <div className="md:col-span-2 p-8 bg-hydro-blue text-white rounded-[40px] shadow-xl shadow-hydro-blue/20">
-                    <h4 className="text-[10px] font-bold uppercase tracking-[0.2em] opacity-50 mb-6">Actionable Intelligence</h4>
-                    <div className="grid sm:grid-cols-2 gap-6">
-                      {result.recommendations.map((rec: string, i: number) => (
-                        <div key={i} className="flex items-start gap-4">
-                          <div className="w-8 h-8 rounded-xl bg-white/10 flex items-center justify-center shrink-0 text-xs font-serif italic">
-                            {i + 1}
-                          </div>
-                          <p className="text-sm text-white/80 leading-snug">{rec}</p>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                 </div>
 
-                <div className="flex items-center justify-between px-6 py-4 bg-hydro-cream border border-hydro-sand/20 rounded-2xl">
-                  <div className="flex items-center gap-3">
-                    <div className="w-2 h-2 rounded-full bg-hydro-cyan animate-pulse" />
-                    <span className="text-[10px] font-mono text-hydro-blue/40 uppercase tracking-widest">System Status: Analysis Verified</span>
-                  </div>
-                  <button className="text-[10px] font-bold uppercase tracking-widest text-hydro-blue hover:underline">Download Dataset</button>
+                <div className="p-5 bg-amber-50 border border-amber-200 rounded-2xl flex items-start gap-3">
+                  <AlertTriangle size={18} className="text-amber-600 shrink-0 mt-0.5" />
+                  <p className="text-sm text-amber-900/90 leading-relaxed">
+                    AI analysis may make mistakes. Always verify water safety with calibrated professional testing devices and certified experts before making health, treatment, or field decisions.
+                  </p>
                 </div>
               </motion.div>
             ) : !analyzing && (
