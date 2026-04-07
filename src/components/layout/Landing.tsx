@@ -58,7 +58,7 @@ export const Hero = ({ onStartHydro, onStartPlant }: { onStartHydro: () => void,
             <Globe size={16} className="text-hydro-cyan-light" /> EcoScan AI
           </div>
           <p className="text-xl text-white/90 leading-relaxed mb-10 max-w-2xl font-medium drop-shadow-lg">
-            Setiap tahun, jutaan orang keracunan dari air yang kelihatannya bersih dan ribuan lainnya dari tanaman yang kelihatannya biasa aja. Dua ancaman nyata, yang selama ini kita hadapi tanpa alat yang tepat.
+            Setiap tahun, jutaan orang keracunan dari air yang kelihatannya bersih dan ribuan lainnya dari tanaman yang kelihatannya biasa aja.
           </p>
           
           <div className="flex flex-wrap justify-center gap-4">
@@ -85,13 +85,6 @@ export const AboutSection = () => {
   return (
     <section className="py-24 bg-hydro-cream px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="mb-16 text-center max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-serif text-hydro-blue mb-6">Kenapa EcoScan AI?</h2>
-          <p className="text-lg text-hydro-blue/80 leading-relaxed">
-            Ide ini muncul dari satu pertanyaan sederhana: gimana caranya teknologi AI bisa beneran berguna buat kehidupan sehari-hari, bukan cuma buat hal-hal yang kelihatan canggih? Jawabannya ada di dua masalah nyata yang sering kita hadapi tapi sering diabaikan — air yang kita nggak yakin aman, dan tanaman yang kita nggak tahu berbahaya atau enggak. Makanya lahirlah website ini, dengan dua AI yang bisa langsung kasih jawaban hanya dari satu foto.
-          </p>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-8">
           {/* HydroScan AI */}
           <motion.div 
