@@ -104,7 +104,7 @@ export const AboutSection = () => {
                 "Banyak orang, terutama di daerah terpencil, nggak punya akses ke uji lab air yang mahal",
                 "Pendaki, camper, dan traveler sering ragu apakah air di alam aman untuk diminum",
                 "Petani dan nelayan butuh cara cepat untuk ngecek kondisi air irigasi atau tambak mereka",
-                "Di situasi darurat (banjir, gempa), nggak ada waktu nunggu hasil lab — butuh jawaban cepat"
+                "Di situasi darurat (banjir, gempa), nggak ada waktu nunggu hasil lab"
               ].map((text, i) => (
                 <li key={i} className="flex gap-4 text-hydro-blue/80">
                   <div className="mt-2 w-1.5 h-1.5 rounded-full bg-hydro-cyan shrink-0" />
