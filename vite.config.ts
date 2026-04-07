@@ -8,7 +8,10 @@ export default defineConfig(({mode}) => {
   return {
     plugins: [react(), tailwindcss()],
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.HELIXMIND_API_KEY': JSON.stringify(env.HELIXMIND_API_KEY),
+      'process.env.HELIXMIND_BASE_URL': JSON.stringify(env.HELIXMIND_BASE_URL),
+      'process.env.HELIXMIND_CHAT_URL': JSON.stringify(env.HELIXMIND_CHAT_URL),
+      'process.env.HELIXMIND_MODEL': JSON.stringify(env.HELIXMIND_MODEL),
     },
     resolve: {
       alias: {
